@@ -1,10 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color:  #99DDFF;
+    background-color:  #d8dbe2;
   }
   
   header {
-    background-color: #3FD2C7;
+    background-color: #A9BCD0;
     color: #fff;
     padding: 20px;
   }
@@ -13,20 +13,20 @@ body {
     margin: 0;
     font-size: 32px;
     font-family: 'Times New Roman', Times, serif;
-    color: #00458B
+    color: #373F51
   }
 
  section h2 {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: #00458B
+    color: #373F51
   }
   
   nav {
     display: flex;
     justify-content: left;
-    background-color: #99DDFF;
+    background-color: #58A4B0;
     padding: 10px;
   }
   
