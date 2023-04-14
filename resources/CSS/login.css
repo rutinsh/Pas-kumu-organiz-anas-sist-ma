@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d8dbe2;
+}
+
+.login-box {
+    max-width: 400px;
+    background-color: #ffd900;
+    border: 2px solid #DC3535;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #373F51;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #A9BCD0;
+}
+
+input[type="submit"] {
+    background-color: #A9BCD0;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #58A4B0;
+}
+
+body {
+    background-image: url('https://media.giphy.com/media/xUOwG3sgHkdqoy41wY/giphy.gif');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+  

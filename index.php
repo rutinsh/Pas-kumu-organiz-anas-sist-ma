@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kristīgo Ebreju apvienības</title>
-	<link rel="stylesheet" href="index.css">
+	<title>Kristīgo Ebreju apvienība</title>
+	<link rel="stylesheet" href="resources/CSS/index.css">
 </head>
 <body>
 	<header>
@@ -32,7 +32,7 @@
 				<p>Viņš uzsver, ka viņa atbrīvošanās no atkarībām būtu bijusi neiespējama bez Dieva palīdzības. Pateicoties viņa ticībai, viņš spēja atrast spēku un mieru savā sirdī, lai pārvarētu grūtības un turpinātu ceļu pretī labajam un veiksmīgam dzīves veidam.</p>
 				<p>Šobrīd Eugēnijs ir aktīvs draudzes biedrs un darbojas kā mentorētājs citiem cilvēkiem, kas saskaras ar narkotisko vielu un alkohola atkarību. Viņš stāsta savu stāstu un dalās ar pieredzi, lai motivētu citus un palīdzētu tiem, kas var atrasties līdzīgā situācijā, kāda viņam bija agrāk.</p>
 				<p>Viņš ir īsts piemērs tam, ka ar ticību, spēku un neatlaidību, ir iespējams pārvarēt pat visgrūtākās dzīves problēmas un atgūt savu dzīvi.</p>
-				<img src="bildes/cilveks.png" alt="Mēneša cilvēks" class="center">
+				<img src="resources/Images/cilveks.png" alt="Mēneša cilvēks" class="center">
 			</article>
 		</section>
 		
