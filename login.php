@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Login Form</title>
-	<link rel="stylesheet" type="text/css" href="resources\CSS\login.css">
-</head>
-<body>
-	<div class="login-box">
-		<h1>Login</h1>
-		<form>
-			<label for="username">Username</label>
-			<input type="text" id="username" name="username" required>
-
-			<label for="password">Password</label>
-			<input type="password" id="password" name="password" required>
-
-			<input type="submit" value="Login">
-		</form>
-	</div>
-</body>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="resources\CSS\login.css" />
+  </head>
+  <body>
+    <div class="login-card">
+      <h2>Pieslēgties</h2>
+      <h3>Ievadiet lietotājvārdu un paroli</h3>
+      <form class="login-form">
+        <input type="text" placeholder="Lietotājvārds" required />
+        <input type="password" placeholder="Parole"required />
+		<div class="form-links">
+			<a href="#">Aizmirsi paroli?</a>
+  			<a href="#">Reģistrēties</a>
+   		</div>
+        <button type="submit">Pieslēgties</button>
+      </form>
+    </div>
+  </body>
 </html>
