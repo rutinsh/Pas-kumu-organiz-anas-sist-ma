@@ -1,12 +1,9 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #d8dbe2;
-}
+
 
 .login-box {
     max-width: 400px;
-    background-color: #ffd900;
-    border: 2px solid #DC3535;
+    background-color: #c08a64;
+    border: 2px solid #4b322d;
     margin: 50px auto;
     padding: 20px;
 }
@@ -38,7 +35,7 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="submit"] {
-    background-color: #A9BCD0;
+    background-color: #8a503c;
     color: #fff;
     border-radius: 5px;
     border: none;
@@ -48,11 +45,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #58A4B0;
+    background-color: #683626;
 }
 
 body {
-    background-image: url('https://media.giphy.com/media/xUOwG3sgHkdqoy41wY/giphy.gif');
+    background-image: url('../Images/Jesus.png');
     background-size: cover; 
     background-repeat: no-repeat;
   }
