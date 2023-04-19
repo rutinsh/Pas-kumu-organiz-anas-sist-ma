@@ -1,3 +1,8 @@
+<?php
+include("backend/Auth.php");
+require("backend/db_con.php");
+?>
+
 <!DOCTYPE html>
 <html lang="lv">
 <head>

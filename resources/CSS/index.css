@@ -1,10 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color:  #d8dbe2;
+    background-color:  #8B4513;
   }
   
   header {
-    background-color: #A9BCD0;
+    background-color: #228B22 ;
     color: #fff;
     padding: 20px;
   }
@@ -26,7 +26,7 @@ body {
   nav {
     display: flex;
     justify-content: left;
-    background-color: #58A4B0;
+    background-color: #F5F5DC;
     padding: 10px;
   }
   

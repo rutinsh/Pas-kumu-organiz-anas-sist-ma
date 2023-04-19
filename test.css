@@ -1,0 +1,95 @@
+/* Vispārējie stili */
+
+body {
+    background-image: url("../Images/Jesus.png");
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Galvenes stili */
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+}
+
+h1 {
+	margin: 0;
+}
+
+/* Navigācijas saraksta stili */
+
+nav {
+	background-color: #eee;
+	padding: 1rem;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li {
+	margin-right: 1rem;
+}
+
+nav a {
+	color: #333;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+nav a:hover {
+	color: #fff;
+	background-color: #333;
+}
+
+/* Galvenā satura stili */
+
+main {
+	padding: 1rem;
+}
+
+/* Apakšējās joslas stili */
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+}
+
+main section {
+    background-color: #fff;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+    padding: 20px;
+    margin: 0 10px;
+    max-width: 700px;
+  }
+
+  main section p {
+    line-height: 1.5;
+  }
+
+  section h2 {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #373F51
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }

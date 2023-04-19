@@ -1,30 +1,24 @@
-<?php
-include("backend/Auth.php");
-require("backend/db_con.php");
-?>
-
 <!DOCTYPE html>
 <html lang="lv">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kristīgo Ebreju apvienība</title>
-	<link rel="stylesheet" href="resources/CSS/index.css">
-</head>
-<body>
-	<header>
-		<h1>Ebreju kristiešu draudze</h1>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kristīgo Ebreju apvienība</title>
+		<link rel="stylesheet" type="text/css" href="test.css">
+	</head>
+	<body>
+		<header>
+			<h1>Ebreju kristiešu draudze</h1>
+		</header>
 		<nav>
 			<ul>
-				<li><a href="About.php">Par mums</a></li>
-				<li><a href="pasakumi.phpl">Pasākumi</a></li>
-				<li><a href="#">Dievkalpojumi</a></li>
+				<li><a href="#">Sākums</a></li>
+				<li><a href="#">Par mums</a></li>
 				<li><a href="#">Kontakti</a></li>
 			</ul>
 		</nav>
-	</header>
-	<main>
-		<section>
+		<main>
+        <section>
 			<h2>Sveicināti "Kristīgo Ebreju apvienības" mājaslapā!</h2>
 			<p>Mūsu mājaslapā jūs varat atrast visu nepieciešamo informāciju par mūsu organizāciju, tās pasākumiem un dievkalpojumiem.</p>
 			<button>Pieteikties pasākumam</button>
@@ -40,8 +34,9 @@ require("backend/db_con.php");
 				<img src="resources/Images/cilveks.png" alt="Mēneša cilvēks" class="center">
 			</article>
 		</section>
-		
-		
-		
-		
-		
+		</main>
+		<footer>
+			<p>&copy; 2023 Kristīgo Ebreju apvienība</p>
+		</footer>
+	</body>
+</html>
