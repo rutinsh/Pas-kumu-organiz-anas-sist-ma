@@ -1,95 +1,96 @@
-/* Vispārējie stili */
-
-body {
-    background-image: url("../Images/Jesus.png");
-	font-family: sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-/* Galvenes stili */
-
-header {
-	background-color: #333;
-	color: #fff;
-	padding: 1rem;
-}
-
-h1 {
-	margin: 0;
-}
-
-/* Navigācijas saraksta stili */
-
-nav {
-	background-color: #eee;
-	padding: 1rem;
-}
-
-nav ul {
-	display: flex;
-	justify-content: space-between;
-}
-
-nav li {
-	margin-right: 1rem;
-}
-
-nav a {
-	color: #333;
-	text-decoration: none;
-	transition: all 0.3s ease;
-}
-
-nav a:hover {
-	color: #fff;
-	background-color: #333;
-}
-
-/* Galvenā satura stili */
-
-main {
-	padding: 1rem;
-}
-
-/* Apakšējās joslas stili */
-
-footer {
-	background-color: #333;
-	color: #fff;
-	padding: 1rem;
-	text-align: center;
-}
-
-main section {
-    background-color: #fff;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-    padding: 20px;
-    margin: 0 10px;
-    max-width: 700px;
+* {
+    box-sizing: border-box;
   }
-
-  main section p {
-    line-height: 1.5;
+  
+  html,
+  body,
+  .wrapper {
+    height: 100%;
   }
-
-  section h2 {
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: #373F51
+  
+  @keyframes rotate {
+    100% {
+      background-position: 15% 50%;
+    }
   }
-
-  main {
-    padding: 20px;
+  
+  body {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0 24px;
+    background-image: url("resources/Images/Jesus.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Euclid Circular A";
+    color: #000;
+    animation: rotate 6s infinite alternate linear;
   }
+  
+  @media (min-width: 500px) {
+    body {
+      padding: 0;
+    }
+  }
+
+.reg-card {
+    position:relative;
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 1.25rem;
+    background-color: transparent;
+    backdrop-filter: brightness(60%);
+    text-align: center;
+    left: 5cm;
+}
+
+@media (min-width: 500px) {
+    .reg-card {
+      margin: 50px auto 0;
+      width: 400px;
+    }
+  }
+
+  .reg-card>h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    margin-top: 0;
+  }
+  
+.reg-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.reg-form button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reg-form button:hover {
+    background-color: #0069d9;
+}
+
+.notmember {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.notmember a {
+    color: #007bff;
+}

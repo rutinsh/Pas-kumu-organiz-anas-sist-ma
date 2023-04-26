@@ -8,17 +8,17 @@ require("backend/db_con.php");
 <head>
 	<meta charset="UTF-8">
 	<title>Par mums</title>
-	<link rel="stylesheet" type="text/css" href="About.css">
+	<link rel="stylesheet" type="text/css" href="resources\CSS\About.css">
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="index.html">Sākums</a></li>
-				<li><a href="pasakumi.html">Pasākumi</a></li>
-				<li><a href="dievpakalpojumi.html">Dievpakalpojumi</a></li>
-				<li><a href="par-mums.html">Par mums</a></li>
-				<li><a href="kontakti.html">Kontakti</a></li>
+				<li><a href="index.php">Sākums</a></li>
+				<li><a href="pasakumi.php">Pasākumi</a></li>
+				<li><a href="dievpakalpojumi.php">Dievpakalpojumi</a></li>
+				<li><a href="parmums.php">Par mums</a></li>
+				<li><a href="kontakti.php">Kontakti</a></li>
 			</ul>
 		</nav>
 	</header>

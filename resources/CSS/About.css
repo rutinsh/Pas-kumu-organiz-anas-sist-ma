@@ -10,7 +10,7 @@ body {
     
 
     header {
-    background-color: #333;
+    background-color: #1ca4a5;
     color: #fff;
     padding: 10px 20px;
     }
@@ -36,7 +36,7 @@ body {
     }
     
     nav a:hover {
-    background-color: #555;
+    background-color: #1900fa;
     }
     
 
@@ -62,7 +62,7 @@ body {
     
 
     footer {
-    background-color: #333;
+    background-color: #1ca4a5;
     color: #fff;
     text-align: center;
     padding: 10px 20px;

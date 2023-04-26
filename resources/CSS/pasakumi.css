@@ -10,7 +10,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #1900fa;
     color: #fff;
     padding: 10px 20px;
 }
@@ -35,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #1900fa;
 }
 
 /* Section styles */
@@ -79,7 +79,7 @@ li {
 
 /* Footer styles */
 footer {
-    background-color: #333;
+    background-color: #1900fa;
     color: #fff;
     text-align: center;
     padding: 10px 20px;

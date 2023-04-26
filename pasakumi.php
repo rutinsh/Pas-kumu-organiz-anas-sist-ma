@@ -8,15 +8,15 @@ require("backend/db_con.php");
 <head>
 	<meta charset="UTF-8">
 	<title>Kristīgo Ebreju apvienība - Pasākumi un dievpakalpojumi</title>
-	<link rel="stylesheet" href="pasakumi.css">
+	<link rel="stylesheet" href="resources/CSS/pasakumi.css">
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="index.html">Sākums</a></li>
-				<li><a href="#">Pasākumi</a></li>
-				<li><a href="#">Dievpakalpojumi</a></li>
+				<li><a href="index.php">Sākums</a></li>
+				<li><a href="pasakumi.php">Pasākumi</a></li>
+				<li><a href="#">Dievkalpojumi</a></li>
 				<li><a href="#">Pieteikšanās</a></li>
 			</ul>
 		</nav>
@@ -42,7 +42,7 @@ require("backend/db_con.php");
 		</section>
 		
 		<section>
-			<h2>Plānotie dievpakalpojumi</h2>
+			<h2>Plānotie dievkalpojumi</h2>
 			<ul>
 				<li>
 					<h3>Nosaukums</h3>

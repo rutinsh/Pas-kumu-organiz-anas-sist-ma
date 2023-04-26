@@ -1,10 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color:  #8B4513;
+    background-color:  #91eced;
   }
   
   header {
-    background-color: #228B22 ;
+    background-color: #1ca4a5 ;
     color: #fff;
     padding: 20px;
   }
@@ -26,8 +26,11 @@ body {
   nav {
     display: flex;
     justify-content: left;
-    background-color: #F5F5DC;
+    background-color: #6ee3e3;
     padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
   }
   
   nav a {
