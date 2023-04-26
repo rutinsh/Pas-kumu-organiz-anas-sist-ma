@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     session_start();
     $_SESSION['username'] = $Lietotajvards;
     if($user['Admins'] == 1) {
-      header('Location: admins.php');
+      header('Location: admin.php');
     } else {
       header('Location: index.php');
     }

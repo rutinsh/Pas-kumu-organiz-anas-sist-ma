@@ -21,12 +21,6 @@ require("backend/db_con.php");
 				<li><a href="pasakumi.php">Pasākumi</a></li>
 				<li><a href="#">Dievkalpojumi</a></li>
 				<li><a href="#">Kontakti</a></li>
-				<?php
-                        if ($_SESSION["admins"] == 1) {
-                            echo "<a onClick=\"Funkcija2()\"><button class=\"menu-btn\">Darbinieki</button></a>";
-                            echo "<a onClick=\"Funkcija3()\"><button class=\"menu-btn\">Kategorijas</button0></a>";
-                        }
-                        ?>
 			</ul>
 		</nav>
 	</header>

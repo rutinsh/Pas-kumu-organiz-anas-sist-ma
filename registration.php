@@ -42,7 +42,7 @@ if (isset($_REQUEST['username']) && isset($_REQUEST['email']) && isset($_REQUEST
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="backend/CSS/registration.css">
     <script src="backend/script.js"></script>
     <link rel="icon" type="image/png" href="resources/Images/favicon.png">
     <title>Reģistrācija</title>
