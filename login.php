@@ -1,5 +1,26 @@
 <?php
+require('backend/db_con.php');
 
+
+if(isset($_POST['submit'])){
+  $Lietotajvards = $_POST['username'];
+  $Parole = $_POST['password'];
+
+  $query = "SELECT * FROM lietotaji WHERE Lietotajvards = '$Lietotajvards' AND Parole = '$Parole' ";
+  $result = mysqli_query($connection, $query);
+
+  if(mysqli_num_rows($result) == 1){
+    $user = mysqli_fetch_assoc($result);
+    session_start();
+    $_SESSION['username'] = $Lietotajvards;
+    if($user['Admins'] == 1) {
+      header('Location: admins.php');
+    } else {
+      header('Location: index.php');
+    }
+    exit();
+  } 
+}
 ?>
 
 <!DOCTYPE html>
