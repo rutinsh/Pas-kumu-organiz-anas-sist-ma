@@ -71,4 +71,38 @@ body {
       width:50%
 
   }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #000000; /* pievienojam apakšējo robežu */
+  }
+  
+  th {
+    background-color: #ab4646;
+    border-bottom: 2px solid #000000;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #935050;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
   
