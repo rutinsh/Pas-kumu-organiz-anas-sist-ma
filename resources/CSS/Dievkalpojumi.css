@@ -1,0 +1,145 @@
+/* Global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .Fields {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+  
+  .input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .btn {
+    display: block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #444;
+  }
+  
+  #add-pop {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  
+  #add-pop.active {
+    display: block;
+  }
+  
+  #close-btn {
+    margin-left: 10px;
+  }
+  
+  .list {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tabulaBox {
+    overflow-x: auto;
+  }
+  
+  .table-sortable {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .table-sortable th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .table-sortable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .table-sortable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .dzest1, .labot1 {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dzest1 {
+    background-color: #ff4d4d;
+    color: #fff;
+  }
+  
+  .labot1 {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .dzest1:hover, .labot1:hover {
+    background-color: #e60000;
+  }
+  
+  #veiksmigi {
+    color: green;
+    margin-top: 20px;
+  }
+  
+  /* Media queries */
+  
+  @media only screen and (max-width: 768px) {
+    .Fields {
+      flex-direction: column;
+    }
+    
+    .input {
+      width: calc(100% - 20px);
+    }
+    
+    #add-pop {
+      top: 120px;
+      right: 10px;
+    }
+  }
+  

@@ -1,112 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Dievkalpojumi</title>
-	<style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-		th, td {
-			padding: 8px;
-			text-align: left;
-			border-bottom: 1px solid #ddd;
-		}
-		th {
-			background-color: #ddd;
-		}
-	</style>
-</head>
-<body>
-	<h1>Dievkalpojumi</h1>
-	<?php
-	$mysqli = new mysqli('localhost', 'root', '', 'apvieniba');
+<?php
+include 'backend/Auth.php';
+require('backend/db_con.php');
 
-	if ($mysqli->connect_errno) {
-		echo 'Failed to connect to database: (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error;
-	} else {
-		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if(isset($_POST['action'])) {
-                // Check if the form was submitted to create a new entry
-                if ($_POST['action'] === 'create') {
-                    $date = $_POST['date'];
-                    $time = $_POST['time'];
-                    $description = $_POST['description'];
-        
-			// Check if the form was submitted to create a new entry
-			if ($_POST['action'] === 'create') {
-				$date = $_POST['date'];
-				$time = $_POST['time'];
-				$description = $_POST['description'];
-				$room_id = $_POST['room_id'];
-				$result = $mysqli->query("INSERT INTO dievkalpojumi (Datums, Laiks, Apraksts, ZaleID) VALUES ('$date', '$time', '$description', $room_id)");
-				if (!$result) {
-					echo 'Error creating entry: ' . $mysqli->error;
-				}
-			}
+if (isset($_REQUEST['datums']) && isset($_REQUEST['laiks']) && isset($_REQUEST['apraksts']) && isset($_REQUEST['zaleID'])) {
+    $datums = $_REQUEST['datums'];
+    $laiks = $_REQUEST['laiks'];
+    $apraksts = $_REQUEST['apraksts'];
+    $zaleID = $_REQUEST['zaleID'];
+
+    $query = "INSERT INTO dievkalpojumi (Datums, Laiks, Apraksts, ZaleID) VALUES ('$datums', '$laiks', '$apraksts', '$zaleID')";
+    $result = mysqli_query($connection, $query);
+
+    if ($result) {
+        echo "<h1 id='veiksmigi'>Veiksmīgi pievienots!</h1>";
     }
 }
-        }
-    }
+?>
 
-			// Check if the form was submitted to edit an existing entry
-			if (isset($_POST['action']) && $_POST['action'] === 'edit') {
-				$id = $_POST['id'];
-				$date = $_POST['date'];
-				$time = $_POST['time'];
-				$description = $_POST['description'];
-				$room_id = $_POST['room_id'];
-				$result = $mysqli->query("UPDATE dievkalpojumi SET Datums='$date', Laiks='$time', Apraksts='$description', ZaleID=$room_id WHERE DievkalpojumaID=$id");
-				if (!$result) {
-					echo 'Error updating entry: ' . $mysqli->error;
-				}
-			}
-
-			// Check if the form was submitted to delete an existing entry
-            if (isset($_POST['action']) && $_POST['action'] === 'delete') {
-                $id = $_POST['id'];
-                $result = $mysqli->query("DELETE FROM dievkalpojumi WHERE DievkalpojumaID=$id");
-                if (!$result) {
-                    echo 'Error deleting entry: ' . $mysqli->error;
-                }
-            }
-            
-
-		// Display entries in HTML table
-		$result = $mysqli->query('SELECT * FROM dievkalpojumi');
-		if ($result->num_rows > 0) {
-			echo '<table>';
-			echo '<tr><th>ID</th><th>Date</th><th>Time</th><th>Description</th><th>Room ID</th><th>Actions</th></tr>';
-			while ($row = $result->fetch_assoc()) {
-				echo '<tr>';
-				echo '<td>' . $row['DievkalpojumaID'] . '</td>';
-				echo '<td>' . $row['Datums'] . '</td>';
-				echo '<td>' . $row['Laiks'] . '</td>';
-				echo '<td>' . $row['Apraksts']. '</td>';
-                echo '<td>' . $row['ZaleID'] . '</td>';
-                			// Add edit and delete buttons
-			echo '<td>';
-			echo '<form method="post" action="edit_dievkalpojums.php">';
-			echo '<input type="hidden" name="id" value="' . $row['DievkalpojumaID'] . '">';
-			echo '<input type="submit" name="edit" value="Edit">';
-			echo '</form>';
-			echo '<form method="post" action="delete_dievkalpojums.php">';
-			echo '<input type="hidden" name="id" value="' . $row['DievkalpojumaID'] . '">';
-			echo '<input type="submit" name="delete" value="Delete">';
-			echo '</form>';
-			echo '</td>';
-
-			echo '</tr>';
-		}
-		echo '</table>';
-	} else {
-		echo 'No entries found.';
-	}
-
-	// Close the database connection
-	$mysqli->close();
-	?>
-
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dievkalpojumi</title>
+        <link rel="icon" href="resources/favicons/fav.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/CSS/Dievkalpojumi.css"/>
+    </head>
+    <body>
+        <div class="Fields">
+            <button id="add-btn">Pievienot Dievkalpojumu</button>
+            <form action="" method="post">
+                <div id="add-pop">
+                    <input name="datums" type="date" class="input" placeholder="Datums" required>
+                    <input name="laiks" type="time" class="input" placeholder="Laiks" required>
+                    <input name="apraksts" type="text" class="input" placeholder="Apraksts" required>
+                    <input name="zaleID" type="number" class="input" placeholder="Zale ID" required>
+                    <input class="btn" name="submit" type="submit" value="Pievienot">
+                    <button id="close-btn">Atcelt</button>
+                </div>
+            </form>
+        </div>
+        <div class="list">
+            <div class="tabulaBox">
+                <table class="table-sortable" id="trow">
+                    <thead>
+                        <th>ID</th>
+                        <th>Datums</th>
+                        <th>Laiks</th>
+                        <th>Apraksts</th>
+                        <th>Zale ID</th>
+                        <th>Rediģēt</th>
+                    </thead>
+                    <?php
+                        $query = "SELECT * FROM dievkalpojumi";
+                        $result = mysqli_query($connection, $query);
+                        while ($row = mysqli_fetch_array($result)) {
+                    ?>
+                    <tr class="table">
+                        <td><?php echo $row["DievkalpojumaID"]; ?></td>
+                        <td><?php echo $row['Datums']; ?></td>
+                        <td><?php echo $row['Laiks']; ?></td>
+                        <td><?php echo $row['Apraksts']; ?></td>
+                        <td><?php echo $row['ZaleID']; ?></td>
+                        <td><a href="backend/delete.php?DievkalpojumaID=<?php echo $row["DievkalpojumaID"];?>"><button class="dzest1" id='dzest'>Dzēst</button></a><br><a href="edit/edit-dievkalpojums.php?dievkalpojuma_id=<?php echo $row["DievkalpojumaID"]; ?>"><button class="labot1" id='labot'>Labot</button></a></td>
+                    </tr>
+                    <?php
+                     }
+                     ?>
+                    </table>
+            </div>
+        </div>
+            <script src="resources/js/table.js"></script>
+        </body>
 </html>
