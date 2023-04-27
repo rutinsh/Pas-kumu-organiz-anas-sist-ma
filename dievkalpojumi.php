@@ -16,8 +16,8 @@ require("backend/db_con.php");
 			<ul>
 				<li><a href="index.php">Sākums</a></li>
 				<li><a href="pasakumi.php">Pasākumi</a></li>
-				<li><a href="#">Dievkalpojumi</a></li>
-				<li><a href="#">Pieteikšanās</a></li>
+                <li><a href="About.php">Par mums</a></li>
+				<li><a href="kontakti.php">Kontakti</a></li>
 			</ul>
 		</nav>
 	</header>

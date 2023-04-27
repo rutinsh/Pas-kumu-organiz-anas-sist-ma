@@ -30,4 +30,20 @@ function DelPasakums()
     }
     mysqli_close($connection);
 }
+
+if (isset($_GET['PasakumaID'])) {
+    DelPasakums();
+}
+
+function DelLietotajs()
+{
+    include 'db_con.php';
+    $sql = "DELETE FROM lietotaji WHERE Lietotaja_ID='" . $_GET["Lietotaja_ID"] . "'";
+    if (mysqli_query($connection, $sql)) {
+        header("Location: lietotaji.php");
+    } else {
+        echo "Error deleting record: " . mysqli_error($connection);
+    }
+    mysqli_close($connection);
+}
 ?>

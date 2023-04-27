@@ -125,6 +125,7 @@ body {
     background-color: transparent;
     backdrop-filter: brightness(40%);
     color: #fff;
+    width: max-content;
   }
   
   .table-sortable {
