@@ -16,10 +16,10 @@ require("backend/db_con.php");
 	<header>
 		<h1>Ebreju kristiešu draudze</h1>
 		<nav>
-			<ul>
+			<ul style="list-style-type: '✡';">
 				<li><a href="About.php">Par mums</a></li>
-				<li><a href="pasakumi.php">Pasākumi</a></li>
-				<li><a href="#">Dievkalpojumi</a></li>
+				<li><a href="dievkalpojumi.php">Dievkalpojumi</a></li>
+				<li><a href="#">Pasākumi</a></li>
 				<li><a href="#">Kontakti</a></li>
 			</ul>
 		</nav>
