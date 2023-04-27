@@ -18,20 +18,29 @@ if (isset($_REQUEST['datums']) && isset($_REQUEST['laiks']) && isset($_REQUEST['
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="lv">
+<head>
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dievkalpojumi</title>
-        <link rel="icon" href="resources/favicons/fav.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="resources/CSS/Dievkalpojumi.css"/>
-    </head>
-    <body>
-        <div class="Fields">
+        <link rel="icon" href="resources/Images/favicon.png" />
+        <link rel="stylesheet" href="resources/CSS/admin.css"/>
+</head>
+<body>
+	<header>
+		<h1>Ebreju kristiešu draudze</h1>
+		<nav>
+			<ul>
+				<li><a href="index.php">Sākums</a></li>
+				<li><a href="Pasakumi.php">Pasākumi</a></li>
+				<li><a href="Dievkalpojumi.php">Dievkalpojumi</a></li>
+                <li><a href="Lietotaji.php">Lietotaji</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div class="Fields">
             <button id="add-btn">Pievienot Dievkalpojumu</button>
             <form action="" method="post">
                 <div id="add-pop">
@@ -66,7 +75,7 @@ if (isset($_REQUEST['datums']) && isset($_REQUEST['laiks']) && isset($_REQUEST['
                         <td><?php echo $row['Laiks']; ?></td>
                         <td><?php echo $row['Apraksts']; ?></td>
                         <td><?php echo $row['ZaleID']; ?></td>
-                        <td><a href="backend/delete.php?DievkalpojumaID=<?php echo $row["DievkalpojumaID"];?>"><button class="dzest1" id='dzest'>Dzēst</button></a><br><a href="edit/edit-dievkalpojums.php?dievkalpojuma_id=<?php echo $row["DievkalpojumaID"]; ?>"><button class="labot1" id='labot'>Labot</button></a></td>
+                        <td><a href="backend/functions.php?DievkalpojumaID=<?php echo $row["DievkalpojumaID"];?>"><button class="dzest1" id='dzest'>Dzēst</button></a><br><a href="edit-dievkalpojums.php?dievkalpojuma_id=<?php echo $row["DievkalpojumaID"]; ?>"><button class="labot1" id='labot'>Labot</button></a></td>
                     </tr>
                     <?php
                      }
@@ -74,6 +83,19 @@ if (isset($_REQUEST['datums']) && isset($_REQUEST['laiks']) && isset($_REQUEST['
                     </table>
             </div>
         </div>
-            <script src="resources/js/table.js"></script>
+        <script>
+    const addBtn = document.getElementById('add-btn');
+    const addPop = document.getElementById('add-pop');
+    const closeBtn = document.getElementById('close-btn');
+
+    addBtn.addEventListener('click', () => {
+        addPop.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        addPop.style.display = 'none';
+    });
+</script>
+
         </body>
 </html>

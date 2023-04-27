@@ -8,7 +8,7 @@ function DelDievkalpojums()
     include 'db_con.php';
     $sql = "DELETE FROM dievkalpojumi WHERE DievkalpojumaID='" . $_GET["DievkalpojumaID"] . "'";
     if (mysqli_query($connection, $sql)) {
-        header("Location: ../Dievkalpojumi.php");
+        header("Location: ../admin.php");
     } else {
         echo "Error deleting record: " . mysqli_error($connection);
     }

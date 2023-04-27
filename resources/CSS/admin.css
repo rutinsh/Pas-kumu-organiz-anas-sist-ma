@@ -1,10 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color:  #91eced;
+    background-image: url("../Images/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   header {
-    background-color: #1ca4a5 ;
     color: #fff;
     padding: 20px;
   }
@@ -12,13 +13,13 @@ body {
   header h1 {
     margin: 0;
     font-size: 32px;
-    font-family: 'Times New Roman', Times, serif;
-    color: #373F51
+    font-family: Arial, sans-serif;
+    color: #ffffff
   }
 
  section h2 {
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
     font-weight: bold;
     color: #373F51
   }
@@ -26,16 +27,18 @@ body {
   nav {
     display: flex;
     justify-content: left;
-    background-color: #6ee3e3;
-    padding: 10px;
+    padding: 30px;
     border-style: solid;
     border-width: 2px;
-    border-color: black;
+    border-color: #b7b0b0;
+    height: 130px;
+    background-color: transparent;
+    backdrop-filter: brightness(40%);
   }
   
   nav a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
     margin: 0 10px;
   }
@@ -50,59 +53,152 @@ body {
     justify-content: center;
   }
   
-  main section {
-    background-color: #fff;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-    padding: 20px;
-    margin: 0 10px;
-    max-width: 700px;
-  }
 
-  main section p {
-    line-height: 1.5;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  .center{
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-      width:50%
-
+  .Fields {
+    display: flex;
+    justify-content:center;
+    margin: 20px 0;
   }
-  table {
+  
+  .input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .btn {
+    display: block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #444;
+  }
+  
+  #add-pop {
+    display: none;
+    position: absolute;
+    top: 250px;
+    left: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  
+  #add-pop.active {
+    display: block;
+  }
+  
+  #close-btn {
+    margin-left: 10px;
+  }
+  
+  .list {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tabulaBox {
+    overflow-x: auto;
+    background-color: transparent;
+    backdrop-filter: brightness(40%);
+    color: #fff;
+  }
+  
+  .table-sortable {
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #333;
+    text-align: center;
+    margin-top: 20px;
   }
   
-  th,
-  td {
-    text-align: left;
+  .table-sortable th {
+    border: 2px solid #b7b0b0;
+    padding: 10px;
+  }
+  
+  .table-sortable td {
+    border: 2px solid #b7b0b0;
+    padding: 10px;
+  }
+  
+  .dzest1, .labot1 {
     padding: 8px;
-    border-bottom: 1px solid #000000; /* pievienojam apakšējo robežu */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  th {
-    background-color: #ab4646;
-    border-bottom: 2px solid #000000;
+  .dzest1 {
+    background-color: #ff4d4d;
+    color: #fff;
   }
   
-  tr:nth-child(even) {
-    background-color: #935050;
+  .labot1 {
+    background-color: #4CAF50;
+    color: #fff;
   }
   
-  tr:hover {
-    background-color: #ddd;
+  .dzest1:hover, .labot1:hover {
+    background-color: #e60000;
   }
   
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  #veiksmigi {
+    color: green;
+    margin-top: 20px;
+  }
+  
+  /* Media queries */
+  
+  @media only screen and (max-width: 768px) {
+    .Fields {
+      flex-direction: column;
+    }
+    
+    .input {
+      width: calc(100% - 20px);
+    }
+    
+    #add-pop {
+      top: 120px;
+      right: 10px;
+    }
+  }
+  
+  button#add-btn {
+    display: block;
+    margin-top: 60px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
   }
   
