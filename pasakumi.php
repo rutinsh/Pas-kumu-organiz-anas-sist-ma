@@ -15,27 +15,26 @@ require("backend/db_con.php");
 		<nav>
 			<ul>
 				<li><a href="index.php">Sākums</a></li>
-				<li><a href="pasakumi.php">Pasākumi</a></li>
-				<li><a href="#">Dievkalpojumi</a></li>
-				<li><a href="#">Pieteikšanās</a></li>
+				<li><a href="dievkalpojumi.php">Dievkalpojumi</a></li>
+                <li><a href="Abouti.php">Par mums</a></li>
+                <li><a href="#">Kontakti</a></li>
 			</ul>
 		</nav>
 	</header>
 	
 	<main>
         <div class="list">
-		<h1>Rezervācija uz dievkalpojumiem</h2>
+		<h1>Pasākumi</h2>
             <div class="tabulaBox">
                 <table class="table-sortable" id="trow">
                     <thead>
                         <th>Datums</th>
                         <th>Laiks</th>
                         <th>Apraksts</th>
-                        <th>Zale ID</th>
 						<th>Rezervācija</th>
                     </thead>
                     <?php
-                        $query = "SELECT * FROM dievkalpojumi";
+                        $query = "SELECT * FROM pasakumi";
                         $result = mysqli_query($connection, $query);
                         while ($row = mysqli_fetch_array($result)) {
                     ?>
@@ -43,8 +42,7 @@ require("backend/db_con.php");
                         <td><?php echo $row['Datums']; ?></td>
                         <td><?php echo $row['Laiks']; ?></td>
                         <td><?php echo $row['Apraksts']; ?></td>
-                        <td><?php echo $row['ZaleID']; ?></td>
-                        <td><a href="#=<?php echo $row["DievkalpojumaID"];?>"><button class="dzest1" id='dzest'>Rezervēt</button></td>
+                        <td><a href="#=<?php echo $row["PasakumaID"];?>"><button class="dzest1" id='dzest'>Pieteikties</button></td>
                     </tr>
                     <?php
                      }
