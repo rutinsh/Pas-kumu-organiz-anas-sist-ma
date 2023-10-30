@@ -46,4 +46,24 @@ function DelLietotajs()
     }
     mysqli_close($connection);
 }
+
+if (isset($_GET['Lietotaja_ID'])) {
+    DelLietotajs();
+}
+
+function DelZale()
+{
+    include 'db_con.php';
+    $sql = "DELETE FROM zale WHERE ZaleID='" . $_GET["ZaleID"] . "'";
+    if (mysqli_query($connection, $sql)) {
+        header("Location: ../admin-zale.php");
+    } else {
+        echo "Error deleting record: " . mysqli_error($connection);
+    }
+    mysqli_close($connection);
+}
+
+if (isset($_GET['ZaleID'])) {
+    DelZale();
+}
 ?>

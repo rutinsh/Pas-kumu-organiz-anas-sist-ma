@@ -10,10 +10,6 @@ if (isset($_REQUEST['datums']) && isset($_REQUEST['laiks']) && isset($_REQUEST['
 
     $query = "INSERT INTO pasakumi (Datums, Laiks, Apraksts) VALUES ('$datums', '$laiks', '$apraksts')";
     $result = mysqli_query($connection, $query);
-
-    if ($result) {
-        echo "<h1 id='veiksmigi'>Veiksmīgi pievienots!</h1>";
-    }
 }
 ?>
 

@@ -19,7 +19,7 @@ body {
   justify-content: flex-end;
   margin: 0;
   padding: 0 24px;
-  background-image: url("resources/Images/Jesus.png");
+  background-image: url("../Images/Jesus.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Euclid Circular A";
@@ -27,7 +27,7 @@ body {
   animation: rotate 6s infinite alternate linear;
 }
 
-@media (min-width: 500px) {
+@media (width >= 500px) {
   body {
     padding: 0;
   }
