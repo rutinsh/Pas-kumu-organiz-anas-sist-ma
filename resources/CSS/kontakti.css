@@ -1,5 +1,9 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
     background-image: url("../Images/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,29 +27,36 @@ body {
     font-weight: bold;
     color: #ffffff
   }
-  
-  nav {
-    display: flex;
-    justify-content: left;
-    background-color: #6ee3e3;
-    padding: 10px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+ 
+  header {
     background-color: transparent;
     backdrop-filter: brightness(40%);
+    color: #fff;
+    padding: 10px 20px;
   }
-  
-  nav a {
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    margin: 0 10px;
-  }
-  
-  nav a:hover {
-    color: #555;
-  }
+}
+
+nav a:hover {
+    background-color: #1900fa;
+}
   
   main {
     padding: 20px;
@@ -62,11 +73,10 @@ body {
   border-radius: 4px;
   padding: 20px;
   margin: 0 10px;
-  max-width: 700px;
+  max-width: 400px;
   }
 
   main section p {
-    font-size: small;
     line-height: 1.5;
     color: white;
   }
@@ -78,4 +88,31 @@ body {
       width:50%
 
   }
-  
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    backdrop-filter: brightness(40%);
+    width: 100%;
+}
+
+a {
+font-weight: bold;
+color: #f1a9a9;
+text-decoration: none;
+}
+
+a:hover {
+color: #000;
+text-decoration: underline;
+}
+
+img.center {
+    width: 30%; 
+    height: auto; 
+    display: block; 
+  }

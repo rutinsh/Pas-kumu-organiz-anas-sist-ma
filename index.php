@@ -20,7 +20,7 @@ require("backend/db_con.php");
 				<li><a href="About.php">Par mums</a></li>
 				<li><a href="dievkalpojumi.php">Dievkalpojumi</a></li>
 				<li><a href="pasakumi.php">Pasākumi</a></li>
-				<li><a href="#">Kontakti</a></li>
+				<li><a href="kontakti.php">Kontakti</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -28,8 +28,12 @@ require("backend/db_con.php");
 		<section>
 			<h2>Sveicināti "Kristīgo Ebreju apvienības" mājaslapā!</h2>
 			<p>Mūsu mājaslapā jūs varat atrast visu nepieciešamo informāciju par mūsu organizāciju, tās pasākumiem un dievkalpojumiem.</p>
-			<button>Pieteikties pasākumam</button>
-			<button>Pieteikties dievkalpojumam</button>
+			<a href="pasakumi.php">
+				<button>Pieteikties pasākumam</button>
+			</a>
+			<a href="dievkalpojumi.php">
+				<button>Pieteikties dievkalpojumam</button>
+			</a>
 		</section>
 		<section>
 			<h2>Mēneša cilvēks - Eugēnijs Āboliņš</h2>

@@ -49,6 +49,7 @@ section {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
+    overflow-x: scroll;
 }
 
 h1 {

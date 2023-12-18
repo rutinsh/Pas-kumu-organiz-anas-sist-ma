@@ -25,8 +25,8 @@ if (isset($_REQUEST['username']) && isset($_REQUEST['email']) && isset($_REQUEST
         if($password != $passwordx2){
             $checkpw = true;
         }else{
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $query = "INSERT INTO lietotaji (Lietotajvards, Parole, Vards, Uzvards, Epasts, Talr_nr) VALUES ('$username','$hashedPassword','$name','$lastname','$email','$phone')";
+            // $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+            $query = "INSERT INTO lietotaji (Lietotajvards, Parole, Vards, Uzvards, Epasts, Talrunis) VALUES ('$username','$password','$name','$lastname','$email','$phone')";
             $result = mysqli_query($con,$query);
             if($result){
                 $create = true;
@@ -51,19 +51,19 @@ if (isset($_REQUEST['username']) && isset($_REQUEST['email']) && isset($_REQUEST
     <div class="reg-card">
         <form>
             <div class='reg-form'>
-                <h2> Reģistrēties</h2>
-                <input name="username" type="text" placeholder="Username" required><br>           
-                <input name="email" type="email" placeholder="Email" required><br>
-                <input name="password" type="password" placeholder="Password" required><br>
-                <input name="passwordx2" type="password" placeholder="Password X2" required><br>
-                <input name="name" type="text" placeholder="Name" required><br>
-                <input name="lastname" type="text" placeholder="Lastname" required><br>
-                <input name="phone" type="text" placeholder="Phone" required><br>
+                <h2> Reģistrācija</h2>
+                <input name="username" type="text" placeholder="Lietotājvārds" required><br>           
+                <input name="email" type="email" placeholder="E-pasts" required><br>
+                <input name="password" type="password" placeholder="Parole" required><br>
+                <input name="passwordx2" type="password" placeholder="Atkārtojiet paroli" required><br>
+                <input name="name" type="text" placeholder="Vārds" required><br>
+                <input name="lastname" type="text" placeholder="Uzvārds" required><br>
+                <input name="phone" type="text" placeholder="Tālrunis" pattern="\d{8}" required><br>
                 <?php
                     if ($check == true){
-                        echo "<h1>Profile with this email already exists!</h1>";
+                        echo "<h1>Profils ar šo e-pastu jau ir izveidots</h1>";
                     }elseif($checkpw == true){
-                        echo "<h1>Passwords doesn't match!</h1>";
+                        echo "<h1>Paroles nav vienādas</h1>";
                     }elseif($create == true){
                         echo "<script>alert('Profils ir veiksmīgi izveidots!'); window.location='index.php';</script>";
                     }
@@ -71,8 +71,8 @@ if (isset($_REQUEST['username']) && isset($_REQUEST['email']) && isset($_REQUEST
             </div>
             <button type="submit" name="submit">Reģistrēties </button>
             <div class="notmember">
-                <label>Already registered?</label>
-                <a href="login.php">Login here!</a>
+                <label>Vai jau reģistrējies?</label>
+                <a href="login.php">Autorizācija</a>
             </div>
         </form>
     </div>
