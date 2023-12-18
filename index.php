@@ -21,6 +21,7 @@ require("backend/db_con.php");
 				<li><a href="dievkalpojumi.php">Dievkalpojumi</a></li>
 				<li><a href="pasakumi.php">Pasākumi</a></li>
 				<li><a href="kontakti.php">Kontakti</a></li>
+				<li><a href="backend/logout.php" class="exit-btn">Iziet</a></li>
 			</ul>
 		</nav>
 	</header>

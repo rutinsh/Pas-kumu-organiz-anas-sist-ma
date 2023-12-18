@@ -19,6 +19,7 @@ require("backend/db_con.php");
                 <li><a href="About.php">Par mums</a></li>
 				<li><a href="kontakti.php">Kontakti</a></li>
 			</ul>
+            <a href="backend/logout.php" class="exit-btn">Iziet</a>
 		</nav>
 	</header>
 	

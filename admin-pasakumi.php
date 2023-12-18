@@ -32,6 +32,7 @@ if (isset($_REQUEST['datums']) && isset($_REQUEST['laiks']) && isset($_REQUEST['
 				<li><a href="index.php">Sākums</a></li>
 				<li><a href="Dievkalpojumi.php">Dievkalpojumi</a></li>
                 <li><a href="Lietotaji.php">Lietotaji</a></li>
+                <li><a href="backend/logout.php" class="exit-btn">Iziet</a></li>
 			</ul>
 		</nav>
 	</header>

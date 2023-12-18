@@ -21,6 +21,7 @@ require("backend/db_con.php");
 				<li><a href="dievkalpojumi.php">Dievpakalpojumi</a></li>
 				<li><a href="About.php">Par mums</a></li>
 			</ul>
+			<a href="backend/logout.php" class="exit-btn">Iziet</a>
 		</nav>
 	</header>
 	<main>
@@ -34,7 +35,7 @@ require("backend/db_con.php");
 		</section>
     </main>
     <footer>
-		<p>&copy; 2023 Kristīgo Ebreju apvienība. Visas tiesības aizsargātas.</p>
+		<p>&copy; Kristīgo Ebreju apvienība © 2023.</p>
 	</footer>
 
 </body>

@@ -37,6 +37,7 @@ if (isset($_REQUEST['VietuSkaits']) && isset($_REQUEST['Apraksts'])) {
 				<li><a href="Dievkalpojumi.php">Dievkalpojumi</a></li>
                 <li><a href="pasakumi.php">Pasākumi</a></li>
                 <li><a href="Lietotaji.php">Lietotaji</a></li>
+                <li><a href="backend/logout.php" class="exit-btn">Iziet</a></li>
 			</ul>
 		</nav>
 	</header>

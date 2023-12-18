@@ -16,9 +16,10 @@ require("backend/db_con.php");
 			<ul>
 				<li><a href="index.php">Sākums</a></li>
 				<li><a href="pasakumi.php">Pasākumi</a></li>
-				<li><a href="dievkalpojumi.php">Dievpakalpojumi</a></li>
+				<li><a href="dievkalpojumi.php">Dievkalpojumi</a></li>
 				<li><a href="kontakti.php">Kontakti</a></li>
 			</ul>
+			<a href="backend/logout.php" class="exit-btn">Iziet</a>
 		</nav>
 	</header>
 	<main>

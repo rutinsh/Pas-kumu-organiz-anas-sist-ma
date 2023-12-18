@@ -33,6 +33,7 @@ if (isset($_REQUEST['datums']) && isset($_REQUEST['laiks']) && isset($_REQUEST['
 				<li><a href="admin-pasakumi.php">Pasākumi</a></li>
                 <li><a href="Lietotaji.php">Lietotaji</a></li>
                 <li><a href="admin-zale.php">Zale</a></li>
+                <li><a href="backend/logout.php" class="exit-btn">Iziet</a></li>
 			</ul>
 		</nav>
 	</header>

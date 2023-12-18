@@ -35,6 +35,28 @@ body {
     padding: 10px 20px;
   }
 
+  nav {
+    position: relative;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; 
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: transparent;
+    backdrop-filter: brightness(40%);
+    border: none;
+    border-radius: 4px;
+}
+
+.exit-btn:hover {
+    background-color:#1900fa;
+}
+
   nav ul {
     list-style-type: none;
     margin: 0;

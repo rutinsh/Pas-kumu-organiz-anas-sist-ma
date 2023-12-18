@@ -2,18 +2,18 @@
 include 'backend/Auth.php';
 require('backend/db_con.php');
 
-if (isset($_REQUEST['lietotajvards']) && isset($_REQUEST['parole']) && isset($_REQUEST['vards']) && isset($_REQUEST['uzvards']) && isset($_REQUEST['epasts']) && isset($_REQUEST['talrnr']) && isset($_REQUEST['admins'])) {
+if (isset($_REQUEST['lietotajvards']) && isset($_REQUEST['parole']) && isset($_REQUEST['vards']) && isset($_REQUEST['uzvards']) && isset($_REQUEST['epasts']) && isset($_REQUEST['talrunis']) && isset($_REQUEST['admins'])) {
     $lietotajvards = $_REQUEST['lietotajvards'];
     $parole = $_REQUEST['parole'];
     $vards = $_REQUEST['vards'];
     $uzvards = $_REQUEST['uzvards'];
     $epasts = $_REQUEST['epasts'];
-    $talrnr= $_REQUEST['talrnr'];
+    $talrnr= $_REQUEST['talrunis'];
     $admins = $_REQUEST['admins'];
 
 
 
-    $query = "INSERT INTO lietotaji (Lietotajvards, Parole, Vards, Uzvards, Epasts, Talr_nr,  Admins) VALUES ('$lietotajvards', '$parole', '$vards' ,'$uzvards', '$epasts',  '$talrnr', '$admins')";
+    $query = "INSERT INTO lietotaji (Lietotajvards, Parole, Vards, Uzvards, Epasts, Talrunis,  Admins) VALUES ('$lietotajvards', '$parole', '$vards' ,'$uzvards', '$epasts',  '$talrnr', '$admins')";
     $result = mysqli_query($connection, $query);
 
     if ($result) {
@@ -40,7 +40,8 @@ if (isset($_REQUEST['lietotajvards']) && isset($_REQUEST['parole']) && isset($_R
 			<ul>
 				<li><a href="index.php">Sākums</a></li>
 				<li><a href="admin.php">Dievkalpojumi</a></li>
-                <li><a href="admin-pasakimi.php">Pasākumi</a></li>
+                <li><a href="admin-pasakumi.php">Pasākumi</a></li>
+                <li><a href="backend/logout.php" class="exit-btn">Iziet</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -53,7 +54,7 @@ if (isset($_REQUEST['lietotajvards']) && isset($_REQUEST['parole']) && isset($_R
                     <input name="vards" type="varchar" class="input" placeholder="vards" required>
                     <input name="uzvards" type="varchar" class="input" placeholder="uzvards" required>
                     <input name="epasts" type="varchar" class="input" placeholder="epasts" required>
-                    <input name="talrnr" type="int" class="input" placeholder="talrnr" required>
+                    <input name="talrunis" type="int" class="input" placeholder="talruna numurs" required>
                     <input name="admins" type="tinyint" class="input" placeholder="admins" required>
                     <input class="btn" name="submit" type="submit" value="Pievienot">
                     <button id="close-btn">Atcelt</button>
@@ -66,7 +67,6 @@ if (isset($_REQUEST['lietotajvards']) && isset($_REQUEST['parole']) && isset($_R
                     <thead>
                         <th>ID</th>
                         <th>Lietotajvārds</th>
-                        <th>Parole</th>
                         <th>Vārds</th>
                         <th>Uzvārds</th>
                         <th>E-pasts</th>
@@ -82,11 +82,10 @@ if (isset($_REQUEST['lietotajvards']) && isset($_REQUEST['parole']) && isset($_R
                     <tr class="table">
                         <td><?php echo $row["Lietotaja_ID"]; ?></td>
                         <td><?php echo $row["Lietotajvards"]; ?></td>
-                        <td><?php echo $row["Parole"]; ?></td>
                         <td><?php echo $row['Vards']; ?></td>
                         <td><?php echo $row['Uzvards']; ?></td>
                         <td><?php echo $row['Epasts']; ?></td>
-                        <td><?php echo $row["Talr_nr"]; ?></td>
+                        <td><?php echo $row["Talrunis"]; ?></td>
                         <td><?php echo $row["Admins"]; ?></td>
                         <td><a href="backend/functions.php?LietotajaID=<?php echo $row["Lietotaja_ID"];?>"><button class="dzest1" id='dzest'>Dzēst</button><button class="labot1" id='labot'>Labot</button></a></td>
                     </tr>
